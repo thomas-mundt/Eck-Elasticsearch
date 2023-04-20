@@ -103,6 +103,7 @@ kubectl get kibana
 ```
 
 ```
-kubectl get secret quickstart-es-elastic-user -o go-template='{{.data.elastic | base64decode}}'
+User: elastic
+Password: kubectl get secret quickstart-es-elastic-user -o go-template='{{.data.elastic | base64decode}}'
 
 ```
