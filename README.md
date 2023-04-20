@@ -83,6 +83,7 @@ kubectl get elasticsearch
 
 ## Deploy Kibana
 
+
 ```
 cat <<EOF | kubectl apply -f -
 apiVersion: kibana.k8s.elastic.co/v1
@@ -100,5 +101,4 @@ EOF
 ```
 kubectl get kibana
 ```
-
 
