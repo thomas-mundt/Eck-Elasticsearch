@@ -80,3 +80,25 @@ kubectl get elasticsearch
 
 ```
 
+
+## Deploy Kibana
+
+```
+cat <<EOF | kubectl apply -f -
+apiVersion: kibana.k8s.elastic.co/v1
+kind: Kibana
+metadata:
+  name: quickstart
+spec:
+  version: 8.7.0
+  count: 1
+  elasticsearchRef:
+    name: quickstart
+EOF
+```
+
+```
+kubectl get kibana
+```
+
+
